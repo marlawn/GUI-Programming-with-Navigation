@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.CoffeeController">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Label text="GUI Programming with JavaFX - Ordering Coffee" />
+            </items>
+        </ToolBar>
+    </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="coffeeSize" prefWidth="150.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="360.0" prefWidth="122.0">
+               <children>
+                  <CheckBox fx:id="frenchVanilla" mnemonicParsing="false" text="French Vanilla">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox fx:id="irishCream" layoutX="24.0" layoutY="182.0" mnemonicParsing="false" text="Irish Cream">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin></CheckBox>
+                  <CheckBox fx:id="caramel" layoutX="24.0" layoutY="200.0" mnemonicParsing="false" text="Caramel">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="mocha" layoutX="24.0" layoutY="209.0" mnemonicParsing="false" text="Mocha">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Number of Cups (MAX 5):">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="quantity" prefHeight="25.0" prefWidth="33.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="17.0" prefWidth="57.0" text="Sub-Total:">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="number" prefHeight="17.0" prefWidth="39.0" text="0.00" />
+            <Button mnemonicParsing="false" onAction="#addCoffee" text="Add">
+               <HBox.margin>
+                  <Insets left="265.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

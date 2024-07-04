@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.BasketsController">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Label text="GUI Programming with JavaFX - Ordering Baskets" />
+            </items>
+        </ToolBar>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Sub-Total: ">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="subtotal" text="0.00" />
+                <Label text=" + Sales Tax: " />
+                <Label fx:id="tax" text="0.00" />
+                <Label text=" = " />
+                <Label fx:id="total" text="0.00" />
+                <Button mnemonicParsing="false" onAction="#placeOrder" text="Place Order">
+                    <HBox.margin>
+                  <Insets left="290.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+    <left>
+        <ListView fx:id="visibleList" prefHeight="310.0" prefWidth="510.0" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <VBox alignment="TOP_CENTER" prefHeight="310.0" prefWidth="247.0" BorderPane.alignment="TOP_CENTER">
+            <children>
+            <Button mnemonicParsing="false" onAction="#load" text="Load">
+               <VBox.margin>
+                  <Insets bottom="120.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+                <Button mnemonicParsing="false" onAction="#remove" text="Remove" />
+            </children>
+        </VBox>
+    </right>
+</BorderPane>

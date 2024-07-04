@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.DonutsController">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Label text="GUI Programming with JavaFX - Ordering Donuts" />
+            </items>
+        </ToolBar>
+    </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="360.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                <children>
+                    <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </VBox.margin>
+                    </ImageView>
+                    <ComboBox fx:id="donutList" onAction="#selectDonut" prefWidth="150.0" />
+                </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="360.0" prefWidth="303.0">
+               <children>
+                  <Label text="Flavors:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ListView fx:id="flavors" prefHeight="147.0" prefWidth="295.0" />
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="302.0" />
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Quantity: ">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="quantity" prefWidth="135.0" />
+              <Label prefHeight="17.0" prefWidth="74.0" text="Sub-Total: ">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="number" prefHeight="17.0" prefWidth="94.0" text="0.00" />
+            <Button mnemonicParsing="false" onAction="#addDonut" prefHeight="25.0" prefWidth="45.0" text="Add">
+               <HBox.margin>
+                  <Insets left="175.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
